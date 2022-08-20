@@ -5,8 +5,6 @@
 #'
 #' @return A data frame with 32 columns
 #' @export
-#' @importFrom stats aggregate
-#' @importFrom stats median
 #'
 #' @examples
 #' sleep_data <- fetch_sleep_params(hypnogram_file = c('W' ,'W','N1','N2','N2','N3','R'),
@@ -14,6 +12,7 @@
 fetch_sleep_params<- function(hypnogram_file, epoch_duration) {
 
   start_of_stages <- data.frame(unclass(rle(hypnogram_file)))
+  colnames(start_of_stages)[2] <- "values"
 
   # Creating a .csv sheet with all parameters
   sleep_data <- data.frame(Wake_duration=numeric(0),
@@ -93,12 +92,12 @@ fetch_sleep_params<- function(hypnogram_file, epoch_duration) {
                                        values == stages_list[stages])$lengths[1]) * epoch_duration)/60
   }
 
-  mean_run_lengths_stages <- aggregate(lengths ~ values, start_of_stages,mean)
+  mean_run_lengths_stages <- stats::aggregate(lengths ~ values, start_of_stages,mean)
   for (stages in 1:length(stages_list))  {
     sleep_data[1,stages+22] = (subset(mean_run_lengths_stages, values == stages_list[stages])$lengths[1] * epoch_duration)/60
   }
 
-  median_run_lengths_stages <- aggregate(lengths ~ values, start_of_stages,median)
+  median_run_lengths_stages <- stats::aggregate(lengths ~ values, start_of_stages,stats::median)
   for (stages in 1:length(stages_list))  {
     sleep_data[1,stages+27] = (subset(median_run_lengths_stages, values == stages_list[stages])$lengths[1] * epoch_duration)/60
   }
