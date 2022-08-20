@@ -1,3 +1,16 @@
+#' Calculate sleep micro architecture parameters
+#'
+#' @param hypnogram_file A character array with sleep stages
+#' @param epoch_duration Duration of sleep epoch in seconds
+#'
+#' @return A data frame with 32 columns
+#' @export
+#' @importFrom stats aggregate
+#' @importFrom stats median
+#'
+#' @examples
+#' sleep_data <- fetch_sleep_params(hypnogram_file = c('W' ,'W','N1','N2','N2','N3','R'),
+#' epoch_duration = 30)
 fetch_sleep_params<- function(hypnogram_file, epoch_duration) {
 
   start_of_stages <- data.frame(unclass(rle(hypnogram_file)))
