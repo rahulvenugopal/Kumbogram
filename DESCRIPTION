@@ -14,3 +14,5 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     stats
+URL: https://github.com/rahulvenugopal/Kumbogram
+BugReports: https://github.com/rahulvenugopal/Kumbogram/issues
