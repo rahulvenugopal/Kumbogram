@@ -10,9 +10,12 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
     stats
 URL: https://github.com/rahulvenugopal/Kumbogram
 BugReports: https://github.com/rahulvenugopal/Kumbogram/issues
+VignetteBuilder: knitr
