@@ -31,14 +31,26 @@ devtools::install_github("rahulvenugopal/Kumbogram")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to use the function:
 
 ```{r example}
 library(Kumbogram)
-## basic example code
 ```
 
-Kumbogram package has many useful functions to gather sleep architecture related parameters from a scored hypnogram file.
+```
+library(reader)
+filename = 'data_full_6hrs_100Hz_hypno_30s.txt'
+hypnogram_file <- n.readLines(paste(filename, sep = "\n"),
+                              header = FALSE,
+                              n=720)
+
+sleep_data <- fetch_sleep_parametres(hypnogram_file = hypnogram_file,
+                                     epoch_duration = 30)
+```
+#### Kumbogram package has many useful functions to:
+
+1. Gather sleep architecture related parameters from a scored hypnogram file
+
 
 `fetch_sleep_params` functions extracts `32` sleep variables
 
