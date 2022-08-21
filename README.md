@@ -28,11 +28,50 @@ library(Kumbogram)
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+Kumbogram package has many useful functions to gather sleep architecture
+related parameters from a scored hypnogram file.
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
+`fetch_sleep_params` functions extracts `32` sleep variables
+
+### Sleep stage durations, percentages and efficiency
+
+1.  Wake\_duration
+2.  N1\_duration
+3.  N2\_duration
+4.  N3\_duration
+5.  R\_duration
+6.  Wake\_percentage
+7.  N1\_percentage
+8.  N2\_percentage 9 N3\_percentage
+9.  R\_percentage,
+10. sleep\_efficiency
+
+### Onsets and total sleep time
+
+12. Wake\_onset
+13. N1\_onset
+14. N2\_onset
+15. N3\_onset
+16. R\_onset
+17. TST
+
+### Longest streak of each sleep stage by epochs count
+
+18. W\_longest\_streak
+19. N1\_longest\_streak
+20. N2\_longest\_streak
+21. N3\_longest\_streak
+22. R\_longest\_streak
+
+### Longest streak of each sleep stage by duration
+
+23. W\_mean\_length\_of\_streak
+24. N1\_mean\_length\_of\_streak
+25. N2\_mean\_length\_of\_streak
+26. N3\_mean\_length\_of\_streak
+27. R\_mean\_length\_of\_streak
+28. W\_median\_length\_of\_streak
+29. N1\_median\_length\_of\_streak
+30. N2\_median\_length\_of\_streak
+31. N3\_median\_length\_of\_streak
+32. R\_median\_length\_of\_streak
