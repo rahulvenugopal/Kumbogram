@@ -78,12 +78,23 @@
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
+<p>This is a basic example which shows you how to use the function:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rahulvenugopal/Kumbogram" class="external-link">Kumbogram</a></span><span class="op">)</span></span>
-<span><span class="co">## basic example code</span></span></code></pre></div>
-<p>Kumbogram package has many useful functions to gather sleep architecture related parameters from a scored hypnogram file.</p>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rahulvenugopal/Kumbogram" class="external-link">Kumbogram</a></span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reader)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>filename <span class="ot">=</span> <span class="st">'data_full_6hrs_100Hz_hypno_30s.txt'</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>hypnogram_file <span class="ot">&lt;-</span> <span class="fu">n.readLines</span>(<span class="fu">paste</span>(filename, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">header =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                              <span class="at">n=</span><span class="dv">720</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>sleep_data <span class="ot">&lt;-</span> <span class="fu">fetch_sleep_parametres</span>(<span class="at">hypnogram_file =</span> hypnogram_file,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">epoch_duration =</span> <span class="dv">30</span>)</span></code></pre></div>
+<div class="section level4">
+<h4 id="kumbogram-package-has-many-useful-functions-to">Kumbogram package has many useful functions to:<a class="anchor" aria-label="anchor" href="#kumbogram-package-has-many-useful-functions-to"></a>
+</h4>
+<ol style="list-style-type: decimal"><li>Gather sleep architecture related parameters from a scored hypnogram file</li></ol>
 <p><code>fetch_sleep_params</code> functions extracts <code>32</code> sleep variables</p>
+</div>
 <div class="section level3">
 <h3 id="sleep-stage-durations-percentages-and-efficiency">Sleep stage durations, percentages and efficiency<a class="anchor" aria-label="anchor" href="#sleep-stage-durations-percentages-and-efficiency"></a>
 </h3>
