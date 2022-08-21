@@ -3,7 +3,7 @@ pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   kumbo-vignette: kumbo-vignette.html
-last_built: 2022-08-21T18:02Z
+last_built: 2022-08-21T18:06Z
 urls:
   reference: https://rahulvenugopal.github.io/Kumbogram/reference
   article: https://rahulvenugopal.github.io/Kumbogram/articles
