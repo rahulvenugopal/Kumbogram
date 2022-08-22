@@ -9,11 +9,11 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  out.width = "300%"
 )
 ```
 
-# Kumbogram
+# Kumbogram <img src="./man/figures/logo.png" align="right" width="300" />
 
 <!-- badges: start -->
 <!-- badges: end -->
