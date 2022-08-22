@@ -52,9 +52,10 @@ library(Kumbogram)
 5.  R\_duration
 6.  Wake\_percentage
 7.  N1\_percentage
-8.  N2\_percentage 9 N3\_percentage
-9.  R\_percentage,
-10. sleep\_efficiency
+8.  N2\_percentage
+9.  N3\_percentage
+10. R\_percentage,
+11. sleep\_efficiency
 
 ### Onsets and total sleep time
 

@@ -63,7 +63,7 @@ sleep_data <- fetch_sleep_parametres(hypnogram_file = hypnogram_file,
 6. Wake_percentage
 7. N1_percentage
 8. N2_percentage
-9  N3_percentage
+9. N3_percentage
 10. R_percentage,
 11. sleep_efficiency
 
