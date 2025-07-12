@@ -8,8 +8,7 @@
 [![Kumbogram](https://img.shields.io/github/downloads/rahulvenugopal/Kumbogram/Dobby/total?color=%27brightgreen%27&label=downloads%40Kumbogram&style=for-the-badge)](https://rahulvenugopal.github.io/Kumbogram/)
 <!-- badges: end -->
 
-The goal of Kumbogram is to spit out sleep macro architecture parameters
-from hypnogram file
+The goal of Kumbogram is to spit out sleep macro architecture parameters from hypnogram file. Not under active development. Archived this and building [PyKumbogram](https://github.com/rahulvenugopal/PyKumbogram)
 
 ## Installation
 
